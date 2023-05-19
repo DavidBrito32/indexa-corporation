@@ -1,63 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     border: none;
     text-decoration: none;
-    list-style: none;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background-color: burlywood;
+    background-color: rgb(245, 229, 209);
 }
 
 header {
-    width: 100%;
-    height: 220px;
-    background: linear-gradient(65deg, #0d0d49, #520474);
+    width: 95%;
+    height: 280px;
+    margin: 0 auto;
+    background-image: url(Imagens/BG\ header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
     box-shadow: 2px 15px 20px rgb(74, 71, 71);
+    border-bottom-right-radius: 18px;
+    border-bottom-left-radius: 18px;
 }
 
-header #social_Media{
-    width: 250px;
+header #container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header #container #social_Media{
+    width: 350px;
     display: flex;
     justify-content: center;
     gap: 10px;
 }
 
-header #social_Media a {
+header #container #social_Media a {
     font-size: 44px;
     color: white;
     transition-duration: 400ms;
+    padding-left: 30px;
 }
 
-header #social_Media a:hover {
+header #container #social_Media a:hover {
     color: greenyellow;
 }
 
-header #Logomarca {
-    width: 550px;
+header #container #Logomarca {
+    width: 950px;
 }
 
-header #Logomarca img {display: block;
+header #Logomarca img {
+    display: block;
     margin: 0 auto;
-    width: 100%;
+    width: 65%;
 }
 
 header nav {
-    width: 615px;
+    width: 915px;
 }
 
 header nav ul {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    gap: 30px;
+    gap: 50px;
+    list-style: none;
 }
 
 header nav li a {
@@ -69,7 +86,7 @@ header nav li a {
 }
 
 header nav li ul a {
-    color: black;
+    color: #faf8f8;
 }
 
 header nav li ul{
@@ -82,20 +99,24 @@ header nav li ul{
     display: flex;
     flex-direction: column;
     transition-duration: 600ms;
+    text-shadow: 0.1em 0.1em 0.2em black;
 }
 
 header nav li:hover ul {
-    background: linear-gradient(60deg, #520474, #540454);
-    border-top-right-radius: 12px;
-    border-bottom-right-radius: 12px;
-    border-bottom-left-radius: 12px;
+    background-image: url(Imagens/BG\ header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 24px;
     visibility: visible;
     opacity: 1;
     box-shadow: 2px 15px 20px rgb(74, 71, 71);
+    z-index: 1;
 }
+
 
 header nav li a:hover{
     color: #c0db0d;
+
 }
 
 header nav li a:active {
@@ -108,13 +129,43 @@ main {
     justify-content: space-around;
     height: calc(100vh -220px);
     display: flex;
+    text-align: justify;
+    padding: 40px;
+
+}
+
+main .fixo {
+    text-align: left;
+    color: transparent;
+    background-image: linear-gradient(75deg, rgb(20, 24, 233), #05eb4a);
+    -webkit-background-clip: text;
+}
+
+main h1, main h2, main h3  {
+    text-align: center;
+}
+
+#consultas {  
+    background-color: #faf8f8;
+    width: 95%;
+    margin: 50px auto 50px auto;
+    flex-direction: column;border-radius: 22px;
+    box-shadow: 2px 18px 20px black;
+    font-size: 22px;
+}
+
+
+#consultas p > ul {
+    list-style: square;
 }
 
 main #conteudo {
-    margin-top: 60px;
-    width: 700px;
-    text-align: justify;
-    margin-bottom: 100px;
+    background-color: #faf8f8;
+    padding: 20px;
+    width: 95%;
+    margin: 50px auto 50px auto;
+    flex-direction: column;border-radius: 22px;
+    box-shadow: 2px 18px 20px black;
 }
 
 main #conteudo h2 {
@@ -140,7 +191,12 @@ main #menu_lateral a {
 /*CONFIGURACAO DO FOOTER*/
 
 footer {
-    background: linear-gradient(65deg, #0d0d49, #520474);
+    width: 95%;
+    margin: 0 auto;
+    border-radius: 22px;
+    background-image: url(Imagens/BG\ header\ \(cópia\).jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 60px 120px;
     display: flex;
     gap: 50px;
@@ -188,7 +244,7 @@ footer div:first-child ul a { /*Primeiro filho*/
     line-height: 50px;
     text-align: center;
     color: white;
-    font-size: 20px;
+    font-size: 28px;
     display: block;
     border: 2px solid white;
     border-radius: 25px;
@@ -201,7 +257,7 @@ footer div:first-child ul a::after {
     width: 20px;
     height: 50px;
     position: absolute;
-    background-color: #ffffff80;
+    background-color: #ffff;
     top: 0;
     left: -50px;
     transform: skewX(35deg);
@@ -221,13 +277,13 @@ footer h5 {
 
 footer > div:nth-child(2) a{
     line-height: 25px;
-    color: #ffffff50;
+    color: #ffff;
     transition-duration: 300ms;
     display: block;
 }
 
 footer > div:nth-child(2) a:hover {
-    color: white;
+    color: rgb(137, 121, 121);
     padding-left: 16px;
 }
 
@@ -242,7 +298,7 @@ footer .newsletter input {
     height: 60px;
     padding-left: 10px;
     width: 100%;
-    border: 2px solid #ffffff50;
+    border: 2px solid #ffff;
     border-radius: 5px;
     background-color: transparent;
     z-index: 1;
@@ -250,7 +306,7 @@ footer .newsletter input {
 }
 
 footer .newsletter input:focus {
-    border-color: white;
+    border-color: rgb(146, 122, 122);
 }
 
 footer .newsletter button {
@@ -267,7 +323,7 @@ footer .newsletter button i {
 footer .newsletter span{
     position: absolute;
     font-size: 18px;
-    color: #ffffff50;
+    color: #fff;
     left: 18px;
     transition-duration: 300ms;
 }
