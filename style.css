@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: none;
+
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
 }
@@ -106,7 +106,8 @@ header nav li:hover ul {
     background-image: url(Imagens/BG\ header.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    border-radius: 24px;
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
     visibility: visible;
     opacity: 1;
     box-shadow: 2px 15px 20px rgb(74, 71, 71);
@@ -166,6 +167,11 @@ main #conteudo {
     margin: 50px auto 50px auto;
     flex-direction: column;border-radius: 22px;
     box-shadow: 2px 18px 20px black;
+}
+
+main #conteudo form input[type="text"] {
+    border: 1px solid black;
+    outline: 2px;
 }
 
 main #conteudo h2 {
